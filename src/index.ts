@@ -1,13 +1,10 @@
 import { readFileSync } from 'fs';
-import Calories from "./Calories";
+import Game from "./Game";
 
 const file = readFileSync('./data.txt', 'utf8');
 
 const main = () => {
-    const calories = new Calories(file);
-
-    console.log(calories.getMostCalories());
-    console.log(calories.getSumOfTopThree());
+    const game = new Game(file);
 }
 
 main();
